@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .button {
+        text-align: center;
+        cursor: pointer;
+        font-size:15px;
+        margin: 0 0 0 100px;
+        border-radius: 4px;
+        border: none;
+        padding: px;
+        width: 200px;
+        height: 30px;
+        transition: all 0.5s;
+      }
+
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .button span:after {
+        content: '»';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+
+      .button:hover span {
+        padding-right: 25px;
+      }
+
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <b>COVID-19 India Stats</b>
+    <hr>
+    <button style="background-color: rgba(0, 17, 255, 0.178)" class="button" id="confirmedCases"><span>Statewise Distribution</span></button>
+    <br><br>
+    <button style="background-color: rgba(238, 255, 0, 0.199)" class="button" id="activeDischarged"><span>Active Comparison</span></button>
+    <br><br>
+    <button style="background-color: rgba(0, 255, 64, 0.199)" class="button" id="hospitalStats"><span>Hospital Stats</span></button>
+    <script src="chart.js"></script>
+    <script src="popup.js"></script>
+
+    <canvas id="covid19-summary" height=300, width=400></canvas>
+    <br> <br> <br>
+    <canvas id="covid19-plot" height=600, width=400></canvas>
+  </body>
+</html>
