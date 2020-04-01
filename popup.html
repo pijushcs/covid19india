@@ -11,7 +11,7 @@
         border: none;
         padding: px;
         width: 200px;
-        height: 30px;
+        height: 25px;
         transition: all 0.5s;
       }
 
@@ -44,16 +44,28 @@
   <body>
     <b>COVID-19 India Stats</b>
     <hr>
-    <button style="background-color: rgba(0, 17, 255, 0.178)" class="button" id="confirmedCases"><span>Statewise Distribution</span></button>
+    <button style="background-color: rgba(0, 17, 255, 0.178)" class="button" id="confirmedCases"><span>Basic Summary</span></button>
     <br><br>
-    <button style="background-color: rgba(238, 255, 0, 0.199)" class="button" id="activeDischarged"><span>Active Comparison</span></button>
+    <button style="background-color: rgba(238, 255, 0, 0.199)" class="button" id="activeDischarged"><span>Statewise Analysis</span></button>
+    <br><br>
+    <button style="background-color: rgba(195, 0, 255, 0.158)" class="button" id="dailyStats"><span>Daily Analysis</span></button>
+    <br><br>
+    <button style="background-color: rgba(255, 136, 0, 0.158)" class="button" id="ageStats"><span>Age Analysis</span></button>
     <br><br>
     <button style="background-color: rgba(0, 255, 64, 0.199)" class="button" id="hospitalStats"><span>Hospital Stats</span></button>
-    <script src="chart.js"></script>
-    <script src="popup.js"></script>
 
-    <canvas id="covid19-summary" height=300, width=400></canvas>
-    <br> <br> <br>
+    <script src="chart.js"></script>
+    <script src="utils.js"></script>
+    <script src="summary.js"></script>
+    <script src="stateAnalysis.js"></script>
+    <script src="activeAnalysis.js"></script>
+    <script src="hospitalAnalysis.js"></script>
+    <script src="dailyAnalysis.js"></script>
+    <script src="ageAnalysis.js"></script>
+    <script src="popup.js"></script>
+    <br> <br>
+    <canvas id="covid19-summary" height=350, width=400></canvas>
+    <br>
     <canvas id="covid19-plot" height=600, width=400></canvas>
   </body>
 </html>

@@ -3,7 +3,7 @@
 
   "name": "Covid19 India Status", 
   "description": "Covid19 India Status Updates",
-  "version": "1.0",
+  "version": "2.2",
   "author": "Pijush Chakraborty",
   "browser_action": {
       "default_icon": {
